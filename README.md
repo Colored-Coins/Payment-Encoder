@@ -1,5 +1,5 @@
 # Payment-Encoder
-[![Build Status](https://travis-ci.org/Colored-Coins/Payment-Encoder.svg?branch=master)](https://travis-ci.org/Colored-Coins/Payment-Encoder) [![Coverage Status](https://coveralls.io/repos/Colored-Coins/Payment-Encoder/badge.svg?branch=master)](https://coveralls.io/r/Colored-Coins/Payment-Encoder?branch=master) [![npm version](https://badge.fury.io/js/cc-payment-encoder.svg)](http://badge.fury.io/js/sffc-encoder)
+[![Build Status](https://travis-ci.org/Colored-Coins/Payment-Encoder.svg?branch=master)](https://travis-ci.org/Colored-Coins/Payment-Encoder) [![Coverage Status](https://coveralls.io/repos/Colored-Coins/Payment-Encoder/badge.svg?branch=master)](https://coveralls.io/r/Colored-Coins/Payment-Encoder?branch=master) [![npm version](https://badge.fury.io/js/cc-payment-encoder.svg)](http://badge.fury.io/js/cc-payment-encoder)
 
 Payment-Encoder provides the encode/decode functions between a Colored Coins payment Object to buffer
 
@@ -16,13 +16,22 @@ Params:
 
 - paymentObject - A standard Colored Coins payment object with the following properties:
 
-```json
+```js
 {
-  skip: Boolean
-  range: Boolean
-  precent: Boolean
-  output: Number - Output to send asset to (up to 15 if range is false and 8191 if true)
-  amountOfUnits: Number - amount of units to send
+  // Skip input after reading asset
+  skip: "Boolean"
+
+  // Range or fixed value output
+  range: "Boolean"
+
+  // Precent or fixed amount
+  precent: "Boolean"
+
+  // Output to send asset to - max value is 15 if range is false and 8191 if true
+  output: "Number"
+
+  // Total amount of units to send
+  amountOfUnits: "Number"
 }
 
 ```
