@@ -1,0 +1,17 @@
+1..6
+ok 1 Payment Decode Encode should return the right decoding
+ok 2 Payment Decode Encode should return the right decoding for bulk operations
+ok 3 Payment Decode Encode should throw out of bounds error
+ok 4 Payment Decode Encode should throw negative error
+ok 5 Payment Decode Encode should throw not output error
+ok 6 Payment Decode Encode should throw not output error
+# tests 6
+# pass 6
+# fail 0
+
+=============================== Coverage summary ===============================
+Statements   : 100% ( 56/56 )
+Branches     : 100% ( 33/33 )
+Functions    : 100% ( 5/5 )
+Lines        : 100% ( 49/49 )
+================================================================================
