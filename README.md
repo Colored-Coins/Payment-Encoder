@@ -11,8 +11,11 @@ $ npm install cc-payment-encoder
 
 
 ### Encode
+
 Params:
-- paymentObject - A standard Colored Coins payment object
+
+- paymentObject - A standard Colored Coins payment object with the following properties:
+
 ```json
 {
   skip: Boolean
@@ -24,7 +27,9 @@ Params:
 
 ```
 
-Returns a new Buffer holding the encoded payment
+Returns a new Buffer holding the encoded payment.
+
+##### Example:
 
 ```js
 var paymentEncode = require('cc- payment-encoder')
@@ -44,9 +49,12 @@ console.log(code) // Will print: <Buffer 21 80 99 37 cb 48>
 ### Decode
 
 Params:
+
 - consume - takes a consumable buffer (You can use [buffer-consumer] like in the example to create one)
 
 Returns a Colored Coins payment Object
+
+##### Example:
 
 ```js
 var paymentEncode = require('cc- payment-encoder')
