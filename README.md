@@ -41,7 +41,7 @@ Returns a new Buffer holding the encoded payment.
 ##### Example:
 
 ```js
-var paymentEncode = require('cc- payment-encoder')
+var paymentEncode = require('cc-payment-encoder')
 var paymentObject = {
     skip: false,
     range: false,
@@ -66,7 +66,7 @@ Returns a Colored Coins payment Object
 ##### Example:
 
 ```js
-var paymentEncode = require('cc- payment-encoder')
+var paymentEncode = require('cc-payment-encoder')
 var consumer = require('buffer-consumer')
 
 var decode = paymentEncode.decode(consumer(code))
