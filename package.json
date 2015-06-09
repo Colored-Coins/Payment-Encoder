@@ -4,7 +4,7 @@
   "description": "The encoding/decoding functions for the colored-coins payment object scheme ",
   "main": "paymentEncoder.js",
   "dependencies": {
-    "sffc-encoder": "^0.1.0"
+    "sffc-encoder": "^0.1.5"
   },
   "directories": {
     "test": "test"
