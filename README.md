@@ -1,5 +1,5 @@
 # Payment-Encoder
-[![Build Status](https://travis-ci.org/Colored-Coins/Payment-Encoder.svg?branch=master)](https://travis-ci.org/Colored-Coins/Payment-Encoder) [![Coverage Status](https://coveralls.io/repos/Colored-Coins/Payment-Encoder/badge.svg?branch=master)](https://coveralls.io/r/Colored-Coins/Payment-Encoder?branch=master) [![npm version](https://badge.fury.io/js/cc-payment-encoder.svg)](http://badge.fury.io/js/cc-payment-encoder)
+[![Build Status](https://travis-ci.org/Colored-Coins/Payment-Encoder.svg?branch=master)](https://travis-ci.org/Colored-Coins/Payment-Encoder) [![Coverage Status](https://coveralls.io/repos/Colored-Coins/Payment-Encoder/badge.svg?branch=master)](https://coveralls.io/r/Colored-Coins/Payment-Encoder?branch=master) [![npm version](https://badge.fury.io/js/cc-payment-encoder.svg)](http://badge.fury.io/js/cc-payment-encoder)  [![npm version](http://slack.coloredcoins.org/badge.svg)](http://slack.coloredcoins.org)
 
 Payment-Encoder provides the encode/decode functions between a Colored Coins payment Object to buffer
 
