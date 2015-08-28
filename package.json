@@ -1,6 +1,6 @@
 {
   "name": "cc-payment-encoder",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "The encoding/decoding functions for the colored-coins payment object scheme ",
   "main": "paymentEncoder.js",
   "dependencies": {
