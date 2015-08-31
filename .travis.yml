@@ -1,12 +1,15 @@
 language: node_js
 node_js:
-  - "iojs"
-  - "0.10"
-  - "0.12"
+- iojs
+- '0.10'
+- '0.12'
 before_script:
-  - npm install -g istanbul
-  - npm install -g mocha
-  - npm install -g coveralls
+- npm install -g istanbul
+- npm install -g mocha
+- npm install -g coveralls
 after_script:
-  - npm run coverage
-  - npm run coveralls
+- npm run coverage
+- npm run coveralls
+notifications:
+  slack:
+    secure: GxoQN7MNJQ5qUEbwWTHS5fXGuwUbcMKYODd34KlIJAPk02vurseLUTwKnT8QvoSAGEHl4LgpC8eRbyXeAuPXHS8GtY77HhTiOpbvTQH3oGabjv8D41Dp6N/dVWKBKotrHC671dw8sG77y8/z+9WhCOUMprutOShlBKLb5YohSEfLGMlf2V5Jo0xItCSY0qKwo7PTcXdBUp1Dvf8u6SDoqqLgqw0lfcvTAFWVlNJv8iGmsLTdmI5n8cezdeiRAmy/wIocB7qo/ryFDQbmNt1f80b6fyJBNs0YTwRPGRZwhnObcneorRShvdcHVI+4FeW1SbIYgFi6n0rcSBB8FFykNrXnT8LAUxWjAuXUieCJ7XMjUyYES3kcbR7nlTg9QckkuTLuHgrpydrdDcQMjhwYxOOk8mOWF9M/0T4SVpG17wADeZv0eJkuSLgY8KVh3c/J+5YajjT210+hQ1vuEjGV94y21ygwMP3TLHy1zf57uTwYJ2ApdZqpcYV6D7j+i7DnmPtoXraUjZ5fcIU0CNZLE8RMuFviYEyRYggZmaCAmXG08TMJInxIuFKBWB53uSiUVYscUFW0Tj61wWNUEZgTIintVrpN4nzrDkpZoJbtYcsaOYAEcadmSCSuIxg82Fa+jYpJ/iXyuEo6JNovRD4y56Gopd2MVjc/PbEhbfIdfws=
