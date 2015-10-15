@@ -1,7 +1,7 @@
 var flagMask = 0xe0
 var skipFlag = 0x80
 var rangeFlag = 0x40
-var precentFlag = 0x20
+var percentFlag = 0x20
 var sffc = require('sffc-encoder')
 
 var padLeadingZeros = function (hex, byteSize) {
@@ -12,7 +12,7 @@ module.exports = {
   encode: function (paymentObject) {
     var skip = paymentObject.skip || false
     var range = paymentObject.range || false
-    var precent = paymentObject.precent || false
+    var percent = paymentObject.percent || false
     if (typeof paymentObject.output === 'undefined') throw new Error('Needs output value')
     var output = paymentObject.output
     if (typeof paymentObject.amountOfUnits === 'undefined') throw new Error('Needs amount value')
@@ -26,7 +26,7 @@ module.exports = {
     var buf = new Buffer(outputString, 'hex')
     if (skip) buf[0] = buf[0] | skipFlag
     if (range) buf[0] = buf[0] | rangeFlag
-    if (precent) buf[0] = buf[0] | precentFlag
+    if (percent) buf[0] = buf[0] | percentFlag
 
     return Buffer.concat([buf, sffc.encode(amountOfUnits)])
   },
@@ -38,12 +38,12 @@ module.exports = {
     var flags = flagsBuffer & flagMask
     var skip = !!(flags & skipFlag)
     var range = !!(flags & rangeFlag)
-    var precent = !!(flags & precentFlag)
+    var percent = !!(flags & percentFlag)
     if (range) {
       output = Buffer.concat([output, consume(1)])
     }
     var amountOfUnits = sffc.decode(consume)
-    return {skip: skip, range: range, precent: precent, output: parseInt(output.toString('hex'), 16), amountOfUnits: amountOfUnits}
+    return {skip: skip, range: range, percent: percent, output: parseInt(output.toString('hex'), 16), amountOfUnits: amountOfUnits}
   },
 
   encodeBulk: function (paymentsArray) {
