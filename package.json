@@ -1,6 +1,6 @@
 {
   "name": "cc-payment-encoder",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "The encoding/decoding functions for the colored-coins payment object scheme ",
   "main": "paymentEncoder.js",
   "dependencies": {
@@ -10,15 +10,19 @@
     "test": "test"
   },
   "scripts": {
-     "test": "mocha",
-     "coverage": "istanbul cover _mocha -- -R spec",
-     "coveralls": "cat ./coverage/lcov.info | coveralls"
+    "test": "mocha",
+    "coverage": "istanbul cover _mocha -- -R spec",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "author": "thehobbit85",
   "license": "MIT",
-  "keywords": ["colored coins", "bitcoin", "blockchain"],
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/Colored-Coins/Payment-Encoder.git"
+  "keywords": [
+    "colored coins",
+    "bitcoin",
+    "blockchain"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Colored-Coins/Payment-Encoder.git"
   }
 }
