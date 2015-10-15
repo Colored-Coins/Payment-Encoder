@@ -26,8 +26,8 @@ Params:
   // Range or fixed value output
   range: "Boolean"
 
-  // Precent or fixed amount
-  precent: "Boolean"
+  // percent or fixed amount
+  percent: "Boolean"
 
   // Output to send asset to - max value is 15 if range is false and 8191 if true
   output: "Number"
@@ -47,7 +47,7 @@ var paymentEncode = require('cc-payment-encoder')
 var paymentObject = {
     skip: false,
     range: false,
-    precent: true,
+    percent: true,
     output: 1,
     amountOfUnits: 321321321
 }
@@ -79,7 +79,7 @@ console.log(paymentEncode.decode(consumer(codeBuffer)))
 // {
 //  skip: false,
 //  range: false,
-//  precent: true,
+//  percent: true,
 //  output: 1,
 //  amountOfUnits: 321321321
 //  }
