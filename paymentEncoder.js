@@ -15,8 +15,8 @@ module.exports = {
     var percent = paymentObject.percent || false
     if (typeof paymentObject.output === 'undefined') throw new Error('Needs output value')
     var output = paymentObject.output
-    if (typeof paymentObject.amountOfUnits === 'undefined') throw new Error('Needs amount value')
-    var amountOfUnits = paymentObject.amountOfUnits
+    if (typeof paymentObject.amount === 'undefined') throw new Error('Needs amount value')
+    var amount = paymentObject.amount
     var outputBinaryLength = output.toString(2).length
     if (output < 0) throw new Error('Output Can\'t be negative')
     if ((!range && outputBinaryLength > 5) || (range && outputBinaryLength > 13)) {
@@ -28,7 +28,7 @@ module.exports = {
     if (range) buf[0] = buf[0] | rangeFlag
     if (percent) buf[0] = buf[0] | percentFlag
 
-    return Buffer.concat([buf, sffc.encode(amountOfUnits)])
+    return Buffer.concat([buf, sffc.encode(amount)])
   },
 
   decode: function (consume) {
@@ -42,8 +42,8 @@ module.exports = {
     if (range) {
       output = Buffer.concat([output, consume(1)])
     }
-    var amountOfUnits = sffc.decode(consume)
-    return {skip: skip, range: range, percent: percent, output: parseInt(output.toString('hex'), 16), amountOfUnits: amountOfUnits}
+    var amount = sffc.decode(consume)
+    return {skip: skip, range: range, percent: percent, output: parseInt(output.toString('hex'), 16), amount: amount}
   },
 
   encodeBulk: function (paymentsArray) {
